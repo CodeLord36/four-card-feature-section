@@ -12,20 +12,20 @@ const accentColors = {
 } as const;
 
 const position = {
-  supervisor: "md:col-start-1 md:row-start-2 ",
-  "team-builder": "md:col-start-2 md:row-start-1",
-  karma: "md:col-start-2 md:row-start-3",
-  calculator: "md:col-start-3 md:row-start-2",
+  supervisor: "md:col-start-1 md:row-start-1 ",
+  "team-builder": "md:col-start-1 md:row-start-1",
+  karma: "md:col-start-1 md:row-start-2",
+  calculator: "md:col-start-3 md:row-start-1",
 };
 
 function FeatureCard({ feature }: FeatureCardProps) {
   return (
     <article
-      className={`relative min-h-64 rounded-md border-t-4 bg-white p-8 shadow-2xl ${accentColors[feature.accent]} ${position[feature.position]} `}
+      className={`relative min-h-64 rounded-md border-t-4 bg-white p-8 shadow-xl ${accentColors[feature.accent]} ${position[feature.position]} `}
     >
-      <h2 className="text-xl font-semibold text-grey-500 ">{feature.title}</h2>
+      <h2 className="text-2xl font-semibold text-grey-500 ">{feature.title}</h2>
 
-      <p className="mt-2 text-sm text-grey-500 ">{feature.description} </p>
+      <p className="mt-2 text-base text-grey-500 ">{feature.description} </p>
 
       <img
         className="absolute bottom-8 right-8 "

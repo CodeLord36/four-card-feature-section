@@ -1,3 +1,9 @@
+export type FeaturePosition =
+  | "supervisor"
+  | "team-builder"
+  | "karma"
+  | "calculator";
+
 export type AccentColor = "red" | "cyan" | "orange" | "blue";
 
 export interface Feature {
@@ -5,4 +11,5 @@ export interface Feature {
   description: string;
   icon: string;
   accent: AccentColor;
+  position: FeaturePosition;
 }

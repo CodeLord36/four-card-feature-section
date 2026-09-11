@@ -12,14 +12,12 @@
   --color-grey-500: hsl(234, 12%, 34%);
   --color-grey-400: hsl(212, 6%, 44%);
   --color-white: hsl(0, 0%, 100%);
+
+  --shadow-3xl: 0 10px 25px rgba(0, 0, 0, 0, 0.08);
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 15px;
 }
 
 body {

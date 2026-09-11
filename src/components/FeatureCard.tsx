@@ -6,21 +6,32 @@ interface FeatureCardProps {
 
 const accentColors = {
   cyan: "border-primary-cyan",
-  red: "",
-  orange: "",
-  blue: "",
+  red: "border-primary-red",
+  orange: "border-primary-orange",
+  blue: "border-primary-blue",
 } as const;
+
+const position = {
+  supervisor: "md:col-start-1 md:row-start-2 ",
+  "team-builder": "md:col-start-2 md:row-start-1",
+  karma: "md:col-start-2 md:row-start-3",
+  calculator: "md:col-start-3 md:row-start-2",
+};
 
 function FeatureCard({ feature }: FeatureCardProps) {
   return (
     <article
-      className={`relative min-h-64 rounded-md border-t-4 bg-white p-8 shadow-[0_10px_25px_rgba(0,0,0,0,0.08)] ${accentColors[feature.accent]} `}
+      className={`relative min-h-64 rounded-md border-t-4 bg-white p-8 shadow-2xl ${accentColors[feature.accent]} ${position[feature.position]} `}
     >
-      <h2 className="text-xl font-semibold text-grey-400 ">{feature.title}</h2>
+      <h2 className="text-xl font-semibold text-grey-500 ">{feature.title}</h2>
 
-      <p className="">{feature.description} </p>
+      <p className="mt-2 text-sm text-grey-500 ">{feature.description} </p>
 
-      <img src={feature.icon} alt="feature-icon" />
+      <img
+        className="absolute bottom-8 right-8 "
+        src={feature.icon}
+        alt="feature-icon"
+      />
     </article>
   );
 }

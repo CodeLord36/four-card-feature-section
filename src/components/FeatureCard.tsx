@@ -25,7 +25,7 @@ function FeatureCard({ feature }: FeatureCardProps) {
     >
       <h2 className="text-2xl font-semibold text-grey-500 ">{feature.title}</h2>
 
-      <p className="mt-2 text-base text-grey-500 ">{feature.description} </p>
+      <p className="mt-2 text-sm text-grey-500 ">{feature.description} </p>
 
       <img
         className="absolute bottom-8 right-8 "

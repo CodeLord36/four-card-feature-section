@@ -4,7 +4,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <main className="px-11 py-20 font-poppins lg:px-10 lg:py-20 ">
+    <main className="px-8 py-20 pb-10 font-poppins md:px-10 md:py-20 ">
       <Header />
       <FeatureGrid />
       <Footer />
